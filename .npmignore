@@ -5,3 +5,5 @@ coverage
 .jshintrc
 .npmignore
 .travis.yml
+.idea
+.directory
