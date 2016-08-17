@@ -1,11 +1,16 @@
 {
   "name": "sequelize-noupdate-attributes",
-  "version": "0.1.0",
-  "description": "No update attributes support for Sequelize.",
+  "version": "0.1.1",
+  "description": "A very simple Sequelize plugin which adds **no update** attributes support.",
   "main": "lib/index.js",
   "keywords": [
     "sequelize",
     "noupdate",
+    "no",
+    "update",
+    "readonly",
+    "read",
+    "only",
     "attributes"
   ],
   "devDependencies": {
