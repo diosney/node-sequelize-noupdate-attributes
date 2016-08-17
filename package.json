@@ -1,0 +1,35 @@
+{
+  "name": "sequelize-noupdate-attributes",
+  "version": "0.1.0",
+  "description": "No update attributes support for Sequelize.",
+  "main": "lib/index.js",
+  "keywords": [
+    "sequelize",
+    "noupdate",
+    "attributes"
+  ],
+  "devDependencies": {
+    "istanbul": "0.4.4",
+    "jshint": "2.9.2",
+    "mocha": "3.0.2",
+    "sequelize": "3.24.0",
+    "should": "^11.1.0",
+    "sqlite3": "3.1.4"
+  },
+  "homepage": "https://github.com/diosney/node-sequelize-noupdate-attributes",
+  "bugs": {
+    "url": "https://github.com/diosney/node-sequelize-noupdate-attributes/issues"
+  },
+  "author": {
+    "name": "Diosney Sarmiento",
+    "email": "diosney.s@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diosney/node-sequelize-noupdate-attributes.git"
+  },
+  "scripts": {
+    "test": " ./node_modules/.bin/jshint lib/ test/ && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
+  }
+}
