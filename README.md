@@ -1,6 +1,6 @@
 # node-sequelize-noupdate-attributes
 
-A very simple [Sequelize](https://github.com/sequelize/sequelize) plugin which adds **no update** attributes support.
+A very simple [Sequelize](https://github.com/sequelize/sequelize) plugin which adds **no update** and **readonly** attributes support.
 
 ## Prerequisites
 
@@ -50,6 +50,25 @@ models.Post.belongsTo(models.Person, {
 });
 ```
 
+### Readonly attributes
+
+If you do want truly **readonly** attributes with no modifications at all
+being allowed, you can use the `readonly` option as shown below:
+
+```js
+var Post = sequelize.define('Post', {
+  content: {
+    type    : Sequelize.STRING,
+    noUpdate: {
+      readOnly: true
+    }
+  }
+});
+```
+
+which effectively disables any modification on the `content` attribute,
+no matter if the previous value was null or not, though exception is
+when the record is new.
 
 ## Issues
 

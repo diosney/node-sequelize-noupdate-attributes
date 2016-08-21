@@ -27,6 +27,20 @@ var Model_2 = sequelize.define('Model_2', {
   attr3: Sequelize.STRING
 });
 
+var Model_3 = sequelize.define('Model_3', {
+  attr1: {
+    type    : Sequelize.STRING,
+    noUpdate: {
+      readOnly: true
+    }
+  },
+  attr2: {
+    type    : Sequelize.STRING,
+    noUpdate: false
+  },
+  attr3: Sequelize.STRING
+});
+
 describe('if `noUpdate`', function () {
   before(function () {
     return sequelize
@@ -103,6 +117,25 @@ describe('if `noUpdate`', function () {
           });
         })
         .should.be.rejected();
+    });
+
+    describe('and readonly was set', function () {
+      it('should not allow modifications on attributes with `readOnly=true` set', function () {
+        var instanceData = {
+          attr1: Math.random().toString(),
+          attr2: Math.random().toString(),
+          attr3: Math.random().toString()
+        };
+
+        return Model_3
+          .create(instanceData)
+          .then(function (newInstance) {
+            return newInstance.update({
+              attr1: Math.random().toString()
+            });
+          })
+          .should.be.rejected();
+      });
     });
   });
 });

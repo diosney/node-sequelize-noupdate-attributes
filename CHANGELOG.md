@@ -1,5 +1,9 @@
 ## Release notes
 
+### 0.2.0
+
+* Added `readOnly` option.
+
 ### 0.1.2
 
 * Removed strong tag from package name.
