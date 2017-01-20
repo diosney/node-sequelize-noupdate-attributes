@@ -1,6 +1,6 @@
 {
   "name": "sequelize-noupdate-attributes",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A very simple Sequelize plugin which adds no update and readonly attributes support.",
   "main": "lib/index.js",
   "keywords": [

@@ -1,5 +1,10 @@
 ## Release notes
 
+### 1.0.0
+
+* As module was very stable, bumped version to `1.0.0` so is marked as
+  **stable** for registries.
+
 ### 0.2.0
 
 * Added `readOnly` option.
