@@ -59,6 +59,13 @@ being allowed, you can use the `readonly` option as shown below:
 var Post = sequelize.define('Post', {
   content: {
     type    : Sequelize.STRING,
+    readOnly: true
+  }
+});
+
+var Post = sequelize.define('Post', {
+  content: {
+    type    : Sequelize.STRING,
     noUpdate: {
       readOnly: true
     }
