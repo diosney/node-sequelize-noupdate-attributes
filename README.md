@@ -9,7 +9,7 @@ Have previously installed the `sequelize` package in the project.
 ## Install
 
 ```sh
-npm install --save sequelize-noupdate-attributes
+yarn add -D sequelize-noupdate-attributes
 ```
 
 ## Usage
@@ -25,16 +25,16 @@ sequelizeNoUpdateAttributes(sequelize); // Note that is the `sequelize` instance
 
 var Post = sequelize.define('Post', {
   content: {
-    type    : Sequelize.STRING,
-    noUpdate: true
-  }
+    type: Sequelize.STRING,
+    noUpdate: true,
+  },
 });
 ```
 
 What this do is to mark the `content` attribute so if an update is done, then:
 
-* if the field previous value is null, it will accept the change
-* if the field previous value is not null, it will trigger a `SequelizeValidationErrorItem` error.
+- if the field previous value is null, it will accept the change
+- if the field previous value is not null, it will trigger a `SequelizeValidationErrorItem` error.
 
 so, the `content` field becomes a **readonly** after its becomes not null.
 
@@ -42,11 +42,11 @@ Works too with foreign key fields in associations:
 
 ```js
 models.Post.belongsTo(models.Person, {
-  as        : 'Creator',
+  as: 'Creator',
   foreignKey: {
     allowNull: false,
-    noUpdate : true    // Will mark the `CreatorId` field to be `noUpdate`d.
-  }
+    noUpdate: true, // Will mark the `CreatorId` field to be `noUpdate`d.
+  },
 });
 ```
 
@@ -58,11 +58,11 @@ being allowed, you can use the `readonly` option as shown below:
 ```js
 var Post = sequelize.define('Post', {
   content: {
-    type    : Sequelize.STRING,
+    type: Sequelize.STRING,
     noUpdate: {
-      readOnly: true
-    }
-  }
+      readOnly: true,
+    },
+  },
 });
 ```
 
