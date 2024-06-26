@@ -13,14 +13,6 @@
     "only",
     "attributes"
   ],
-  "devDependencies": {
-    "istanbul": "0.4.4",
-    "jshint": "2.9.2",
-    "mocha": "3.0.2",
-    "sequelize": "3.24.0",
-    "should": "^11.1.0",
-    "sqlite3": "3.1.4"
-  },
   "homepage": "https://github.com/diosney/node-sequelize-noupdate-attributes",
   "bugs": {
     "url": "https://github.com/diosney/node-sequelize-noupdate-attributes/issues"
@@ -36,5 +28,13 @@
   },
   "scripts": {
     "test": " ./node_modules/.bin/jshint lib/ test/ && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.7",
+    "mocha": "^5.2.0",
+    "sequelize": "^4.42.0",
+    "should": "^13.2.3",
+    "sqlite3": "^4.0.4"
   }
 }
