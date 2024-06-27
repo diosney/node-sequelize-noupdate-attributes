@@ -1,8 +1,14 @@
 {
   "name": "sequelize-noupdate-attributes",
-  "version": "1.0.0",
-  "description": "A very simple Sequelize plugin which adds no update and readonly attributes support.",
-  "main": "lib/index.js",
+  "version": "2.0.0",
+  "description": "A Sequelize plugin which adds no update and readonly attributes support to models.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "npm run build:ts",
+    "build:ts": "npm run clean && npx tsc --project tsconfig.json",
+    "clean": "npx rimraf ./lib",
+    "test": "npm run build && npx mocha --spec=./__tests__/**/*.ts"
+  },
   "keywords": [
     "sequelize",
     "noupdate",
@@ -11,8 +17,16 @@
     "readonly",
     "read",
     "only",
-    "attributes"
+    "attributes",
+    "models",
+    "models"
   ],
+  "peerDependencies": {
+    "sequelize": ">=6.16.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "homepage": "https://github.com/diosney/node-sequelize-noupdate-attributes",
   "bugs": {
     "url": "https://github.com/diosney/node-sequelize-noupdate-attributes/issues"
@@ -26,15 +40,24 @@
     "type": "git",
     "url": "https://github.com/diosney/node-sequelize-noupdate-attributes.git"
   },
-  "scripts": {
-    "test": " ./node_modules/.bin/jshint lib/ test/ && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
+  "funding": {
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/diosney"
   },
+  "files": [
+    "lib/"
+  ],
   "devDependencies": {
-    "istanbul": "^0.4.5",
-    "jshint": "^2.9.7",
-    "mocha": "^5.2.0",
-    "sequelize": "^4.42.0",
-    "should": "^13.2.3",
-    "sqlite3": "^4.0.4"
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.17.5",
+    "chai": "^4.4.1",
+    "mocha": "^10.5.2",
+    "rimraf": "^5.0.7",
+    "sequelize": "^6.16.0",
+    "source-map-support": "^0.5.21",
+    "sqlite3": "^5.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
   }
 }

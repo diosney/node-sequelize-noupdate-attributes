@@ -1,0 +1,10 @@
+{
+  "timeout"  : 15000,
+  "recursive": true,
+  "require"  : [
+    "ts-node/register",
+    "source-map-support/register"
+  ],
+  "reporter" : "progress",
+  "sort"     : true
+}
