@@ -1,5 +1,9 @@
 ### Release Notes
 
+#### 2.0.2
+
+- Updated `package-lock.json` for Node.js v14, so it complies with GitHub tests when testing Node.js v14 and upwards.
+
 #### 2.0.1
 
 - Fixed default export.
