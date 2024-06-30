@@ -1,5 +1,9 @@
 ### Release Notes
 
+#### 2.0.1
+
+- Fixed default export.
+
 #### 2.0.0
 
 - (@DanielOverdevestPZH) Make plugin compatible with latest Sequelize v6. 

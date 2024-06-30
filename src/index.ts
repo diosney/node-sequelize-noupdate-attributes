@@ -12,9 +12,7 @@ import { ValidationOptions } from 'sequelize/types/instance-validator';
 import './sequelize-extensions';
 import { NoUpdateAttributesValidatorKeys } from './sequelize-extensions';
 
-export { NoUpdateAttributesValidatorKeys } from './sequelize-extensions';
-
-export default function addHook(sequelize: Sequelize) {
+function addHook(sequelize: Sequelize) {
   if (!sequelize) {
     throw new Error('Missing required `sequelize` instance option.');
   }
@@ -79,3 +77,5 @@ export default function addHook(sequelize: Sequelize) {
     }
   });
 }
+
+export = addHook;

@@ -39,6 +39,7 @@ as demonstrated in the examples below:
 const sequelizeNoUpdateAttributes = require('sequelize-noupdate-attributes');
 
 const sequelize = new Sequelize('sqlite::memory:');
+
 // Note that the passed reference is the `sequelize` instance.
 sequelizeNoUpdateAttributes(sequelize);
 
@@ -107,7 +108,7 @@ If by any chance both `readonly` and `noUpdate` are present, `readOnly` takes pr
   property of type `ValidationErrorItem[]`. 
 
   Each `ValidationErrorItem` instance will have an attribute called `validatorKey`, which, in the case of a plugin
-  validation error, will be` 'noUpdateAttribute'` (`NoUpdateAttributesValidatorKeys.NoUpdateAttribute`).
+  validation error, will be `'noUpdateAttribute'`.
 
 ## Issues
 

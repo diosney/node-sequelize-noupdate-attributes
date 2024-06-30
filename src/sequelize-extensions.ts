@@ -7,8 +7,6 @@ declare module 'sequelize' {
   }
 }
 
-export type ModelNoUpdateAttributeColumnOptions = ModelAttributeColumnOptions;
-
 export const enum NoUpdateAttributesValidatorKeys {
   NoUpdateAttribute = 'noUpdateAttribute'
 }
